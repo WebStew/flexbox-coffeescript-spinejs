@@ -1,0 +1,54 @@
+h2 Browser support
+p Broken up by "version" of flexbox:
+dl
+    dt New
+    dd Means the recent syntax from the specification ( e.g. <code>display: flex;</code> )
+    dt Tweener
+    dd Means an odd unofficial syntax from 2011 ( e.g. <code>display: flexbox;</code> )
+    dt Old
+    dd Means the old syntax from 2009 ( e.g. <code>display: box;</code> )
+
+table.table.table-bordered
+    thead
+        tr
+            th( scope='col' ) Chrome
+            th( scope='col' ) Safari
+            th( scope='col' ) Firefox
+            th( scope='col' ) Opera
+            th( scope='col' ) IE
+            th( scope='col' ) Android
+            th( scope='col' ) iOS
+    tbody
+        tr
+            td 21+ ( New ), 20- ( Old )
+            td 3.1+ ( Old ), 6.1+ ( New )
+            td 2-21 ( Old ), 22+ ( New )
+            td 12.1+ ( New )
+            td 10 ( Tweener ), 11+ ( New )
+            td 2.1+ ( Old ), 4.4+ ( New )
+            td 3.2+ ( Old ), 7.1+ ( New )
+
+h3 Vendor prefixes
+h4 Display
+ul
+    li display: -webkit-box;
+    li display: -moz-box;
+    li display: -ms-flexbox;
+    li display: -webkit-flex;
+    li display: flex;
+
+h4 Box flex
+ul
+    li -webkit-box-flex: value;
+    li -moz-box-flex:    value;
+    li -webkit-flex:     value;
+    li -ms-flex:         value;
+    li flex:             value;
+
+h4 Order
+ul
+    li -webkit-box-ordinal-group:    value;
+    li -moz-box-ordinal-group:       value;
+    li -ms-flex-order:               value;
+    li -webkit-order:                value;
+    li order:                        value;

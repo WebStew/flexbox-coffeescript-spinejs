@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Flexbox | CSS Tutorials</title>
+
+        <link href="/css/bootstrap.css" rel="stylesheet" media="screen">
+        <link href="/css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+        <link href="/css/bootstrap-theme.css" rel="stylesheet" media="screen">
+        <link href="/css/application.css" rel="stylesheet">
+    </head>
+    <body>
+        <header class="navbar navbar-inverse navbar-fixed-top" role="banner">
+            <div class="navbar-inner">
+                <div class="container">
+                    <h1 class="brand">FlexBox</h1>
+                    <nav class="nav-collapse collapse">
+                        <ul class="nav" role="navigation">
+                            <li><a href="#/introduction">Introduction</a></li>
+                            <li><a href="#/basics">Basics</a></li>
+                            <li><a href="#/examples">Examples</a></li>
+                            <li><a href="#/browsers">Browser support</a></li>
+                            <li><a href="#/resources">Resources</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main id="content" class="content container controller-stack controller-loading" role="main">
+            <p class="notification-loading" title="Please wait while the content loads...">
+                <span class="access">Please wait while the content loads...</span>
+            </p>
+            <section id="introduction" class="controller"></section>
+            <section id="basics" class="controller"></section>
+            <section id="examples" class="controller"></section>
+            <section id="browsers" class="controller"></section>
+            <section id="resources" class="controller"></section>
+        </main>
+        <script src="/js/application.js" charset="utf-8"></script>
+        <script charset="utf-8">
+            jQuery(function() {
+                var Flexbox     = require( 'index' );
+                window.Flexbox  = new Flexbox();
+            });
+    </script>
+    </body>
+</html>

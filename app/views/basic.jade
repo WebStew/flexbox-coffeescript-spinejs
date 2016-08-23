@@ -1,0 +1,96 @@
+h2 Basics
+ul( class='nav nav-tabs' )
+    li( class='active' )
+        a( href='#basics-parent' ) Properties for the parent
+    li
+        a( href='#basics-children' ) Properties for the children
+
+#basics-parent.tab-content.tab-content-active
+    h3 Properties for the parent
+    p This defines a flex container; inline or block depending on the given value. It enables a flex context for all its direct children.
+    code .container { display: flex; }
+
+    h4 Flex direction
+    p This establishes the main-axis, thus defining the direction flex items are placed in the flex container. Flexbox is (aside from optional wrapping) a single-direction layout concept. Think of flex items as primarily laying out either in horizontal rows or vertical columns.
+    code container { flex-direction: row | row-reverse | column | column-reverse; }
+    ul
+        li row (default): left to right in ltr; right to left in rtl
+        li row-reverse: right to left in ltr; left to right in rtl
+        li column: same as row but top to bottom
+        li column-reverse: same as row-reverse but bottom to top
+
+    h4 Flex wrap
+    p By default, flex items will all try to fit onto one line. You can change that and allow the items to wrap as needed with this property. Direction also plays a role here, determining the direction new lines are stacked in.
+    code .container { flex-wrap: nowrap | wrap | wrap-reverse; }
+    ul
+        li nowrap (default): single-line / left to right in ltr; right to left in rtl
+        li wrap: multi-line / left to right in ltr; right to left in rtl
+        li wrap-reverse: multi-line / right to left in ltr; left to right in rtl
+
+    h4 Flex flow
+    p This is a shorthand flex-direction and flex-wrap properties, which together define the flex container's main and cross axes. Default is row nowrap.
+    code flex-flow: { 'flex-direction' || 'flex-wrap'; }
+
+    h4 Justify content
+    p This defines the alignment along the main axis. It helps distribute extra free space left over when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size. It also exerts some control over the alignment of items when they overflow the line.
+    code .container { justify-content: flex-start | flex-end | center | space-between | space-around; }
+    ul
+        li flex-start (default): items are packed toward the start line
+        li flex-end: items are packed toward to end line
+        li center: items are centered along the line
+        li space-between: items are evenly distributed in the line; first item is on the start line, last item on the end line
+        li space-around: items are evenly distributed in the line with equal space around them
+
+    h4 Align items
+    p This defines the default behaviour for how flex items are laid out along the cross axis on the current line. Think of it as the justify-content version for the cross-axis ( perpendicular to the main-axis ).
+    code .container { align-items: flex-start | flex-end | center | baseline | stretch; }
+    ul
+        li flex-start: cross-start margin edge of the items is placed on the cross-start line
+        li flex-end: cross-end margin edge of the items is placed on the cross-end line
+        li center: items are centered in the cross-axis
+        li baseline: items are aligned such as their baselines align
+        li stretch (default): stretch to fill the container (still respect min-width/max-width)
+
+    h4 Align content
+    p
+        | This aligns a flex container's lines within when there is extra space in the cross-axis, similar to how justify-content aligns individual items within the main-axis.
+        b  Note:
+        |  this property has no effect when there is only one line of flex items.
+    ul
+        li flex-start: lines packed to the start of the container
+        li flex-end: lines packed to the end of the container
+        li center: lines packed to the center of the container
+        li space-between: lines evenly distributed; the first line is at the start of the container while the last one is at the end
+        li space-around: lines evenly distributed with equal space between them
+        li stretch (default): lines stretch to take up the remaining space
+
+#basics-children.tab-content
+    h3 Properties for the children
+
+    h4 Order
+    p By default, flex items are laid out in the source order. However, the order property controls the order in which they appear in the flex container.
+    code .item { order: integer; }
+
+    h4 Flex grow
+    p This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.
+    p If all items have flex-grow set to 1, every child will set to an equal size inside the container. If you were to give one of the children a value of 2, that child would take up twice as much space as the others.
+    p
+        b Note
+        |  Negative numbers are invalid.
+    code .item { flex-grow: number; }
+
+    h4 Flex shrink
+    p This defines the default size of an element before the remaining space is distributed.
+    code .item { flex-basis: length | auto; }
+
+    h4 Flex
+    p This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto.
+    code .item { flex: none | [ 'flex-grow' 'flex-shrink'? || 'flex-basis' ]}
+
+    h4 Align self
+    p This allows the default alignment (or the one specified by align-items) to be overridden for individual flex items.
+    p Please see the align-items explanation to understand the available values.
+    p
+        b Note
+        |  that float, clear and vertical-align have no effect on a flex item.
+    code .item { align-self: auto | flex-start | flex-end | center | baseline | stretch; }

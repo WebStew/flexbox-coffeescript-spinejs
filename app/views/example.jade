@@ -1,0 +1,92 @@
+
+h2 Examples
+
+ul
+    li flex-direction:
+        strong.code--flex-direction  row;
+
+    li align-tems:
+        strong.code--align-items  stretch;
+
+    li justify-content:
+        strong.code--justify-content  center;
+
+    li order:
+        strong.code--order  1;
+
+    li flex-grow:
+        strong.code--flex-grow  0;
+
+    li align-self:
+        strong.code--align-self  auto;
+
+.flex-controls
+    .flex-control
+        label( for='flex-direction' ) Flex direction
+        select.flex-select-parent( data-declaration='flex-direction' id='flex-direction' )
+            option( value='row' ) Row
+            option( value='row-reverse' ) Row reverse
+            option( value='column' ) Column
+            option( value='column-reverse' ) Column reverse
+
+    .flex-control
+        label( for='align-items' ) Align items
+        select.flex-select-parent( data-declaration='align-items' id='align-items' )
+            option( value='stretch' ) Stretch
+            option( value='flex-start' ) Flex start
+            option( value='flex-end' ) Flex end
+            option( value='center' ) Center
+            option( value='baseline' ) Baseline
+
+    .flex-control
+        label( for='justify-content' ) Justify content
+        select.flex-select-parent( data-declaration='justify-content' id='justify-content' )
+            option( value='flex-start' ) Flex start
+            option( value='flex-end' ) Flex end
+            option( value='center' ) Center
+            option( value='space-between' ) Space between
+            option( value='space-around' ) Space around
+
+    .flex-control
+        label( for='order' ) Order
+        select.flex-select-child( data-declaration='order' id='order' )
+            option( value='1' ) First
+            option( value='3' ) Second
+            option( value='4' ) Third
+
+    .flex-control
+        label( for='flex-grow' ) Flex grow
+        select.flex-select-child( data-declaration='flex-grow' id='flex-grow' )
+            option( value='0' ) Equal
+            option( value='1' ) Twice
+
+    .flex-control
+        label( for='align-self' ) Align self
+        select.flex-select-child( data-declaration='align-self' id='align-self' )
+            option( value='auto' ) Auto
+            option( value='stretch' ) Stretch
+            option( value='flex-start' ) Flex start
+            option( value='flex-end' ) Flex end
+            option( value='center' ) Center
+            option( value='baseline' ) Baseline
+
+.flex.flex-direction-row.align-items-stretch.justify-content-center
+
+    .flex-box.flex-box-child.order-1.flex-grow-0.align-self-auto
+        h3.flex-title Flexbox 1
+        img.flex-img( src='http://dummyimage.com/100/f9f9f9/333.png' alt='Dummy image' )
+        p.flex-description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium nemo consequuntur ratione laboriosam laborum quasi id est quia odio.
+
+    .flex-box.order-2
+        h3.flex-title Flexbox 2
+        img.flex-img( src='http://dummyimage.com/100/f9f9f9/333.png' alt='Dummy image' )
+        p.flex-description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium nemo consequuntur ratione laboriosam laborum quasi id est quia odio.
+        p.flex-description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium nemo consequuntur ratione laboriosam laborum quasi id est quia odio.
+
+    .flex-box.order-3
+        h3.flex-title Flexbox 3
+        img.flex-img( src='http://dummyimage.com/100/f9f9f9/333.png' alt='Dummy image' )
+        p.flex-description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium nemo consequuntur ratione laboriosam laborum quasi id est quia odio.
+        p.flex-description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium nemo consequuntur ratione laboriosam laborum quasi id est quia odio.
+        p.flex-description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium nemo consequuntur ratione laboriosam laborum quasi id est quia odio.
+
